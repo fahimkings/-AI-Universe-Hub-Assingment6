@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI-Universe-Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+    <style>
+      @media screen and (min-width: 676px) {
+          .modal-dialog {
+            max-width: 1000px; /* New width for default modal */
+          }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- header section start -->
+    <header class="text-center">
+        <h2 class="mt-4 fw-bold">AI Universe Hub</h2>
+        <button id="sort-data" type="button" class="btn btn-danger mt-3 rounded-3 p-2 fw-semibold">Sort By Date</button>
+    </header>
+    <!-- header section end -->
+
+    <!-- main section start -->
+    <main class="mt-4 container">
+
+        <!-- card part start -->
+        <section class="mt-5">
+            <div id="card-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <!-- entering card -->
+                
+              </div>
+        </section>
+        <!-- card part end -->
+
+        <!-- spinner or loader-->
+        <section id="spinner-loader" class="">
+            <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
+            <div class="spinner-border text-black" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            </div>
+        </section>
+      <!-- spinner or loader-->
+
+        <!-- Shows Button -->
+        <section class="text-center mt-4 mb-5">
+            <button id="show-data" onclick="DisplayAllDataTogether()" type="button" class="btn btn-danger mt-3 rounded-3 p-2 fw-semibold">See More</button>
+        </section>
+        <!-- Shows Button -->
+
+        
+
+        <!-- modal section start -->
+        <section class="">
+
+        <!-- Modal -->
+            <div class="modal fade" id="featuresDetails" tabindex="-1" aria-labelledby="featuresDetailsLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 id="modal-heading" class="modal-title fs-5"></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- modal body started -->
+                        <div class="modal-body  d-flex flex-lg-row flex-column align-items-start justify-content-between gap-3">
+                            <!-- start of image info section -->
+                            <div class="border border-danger p-lg-4 p-1 rounded bg-light">
+                                <!-- pricing started  -->
+                                <h4 id="featuresDetailsLabel"></h4>
+                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                    <div id="basic" class="p-md-3 p-lg-4 bg-white rounded">
+
+                                    </div>
+                                    <div id="pro" class="p-md-3 p-lg-4 bg-white rounded">
+
+                                    </div>
+                                    <div id="enterprise" class="p-md-3 p-lg-4 bg-white rounded">
+
+                                    </div>
+                                    <!-- pricing end  -->
+                                    </div>
+                                    <!-- Features & Integrations started -->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                    <!-- Features started -->
+                                    <div class="mt-sm-3 ">
+                                        <h4 id="featureHeader"></h4>
+                                        <span id="all-features"></span>
+                                    </div>
+                                    <!-- Features ended -->
+                                    <div class="mt-sm-3 ">
+                                        <h4 id="integrations-header"></h4>
+                                        <span id="all-integrations"></span>
+                                    </div>
+                                </div>
+                                <!-- Features & Integrations end -->
+                            </div>
+                            <!-- end of image info section -->
+                            <!-- start of image section -->
+                            <div class="position-relative">
+                                <span id="img-tag"></span>
+                                <p class="mt-3" id="input-output"></p>
+                                <div class="position-absolute top-0 end-0 ">
+                                  <p id="accuracy" class="bg-danger px-3 py-1 text-center text-white rounded-start"></p>
+                                </div>
+                            </div>
+                            <!-- start of image section -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- modal section end -->
+
+    </main>
+    <!-- main section end -->
+    
+    <!-- scripting link -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
